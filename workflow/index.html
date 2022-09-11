@@ -1,0 +1,856 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mymlchecklist.io/workflow/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>Workflow of ML model - mymlchecklist</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#workflow-for-creating-machine-learning-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="mymlchecklist" class="md-header__button md-logo" aria-label="mymlchecklist" data-md-component="logo">
+      
+  <img src="../img/network.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mymlchecklist
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workflow of ML model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Hg03/classification" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="mymlchecklist" class="md-nav__button md-logo" aria-label="mymlchecklist" data-md-component="logo">
+      
+  <img src="../img/network.png" alt="logo">
+
+    </a>
+    mymlchecklist
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Hg03/classification" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what/" class="md-nav__link">
+        What is ML
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/" class="md-nav__link">
+        Types of ML task
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Workflow of ML model
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Workflow of ML model
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-for-creating-machine-learning-model" class="md-nav__link">
+    Workflow for creating machine learning model 🏗️
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow for creating machine learning model 🏗️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    Step 4️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7" class="md-nav__link">
+    Step 7️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8" class="md-nav__link">
+    Step 8️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9" class="md-nav__link">
+    Step 9️⃣
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scraping/" class="md-nav__link">
+        Data Collection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataexpC/" class="md-nav__link">
+        Data Exploration (Classification)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datacleanC/" class="md-nav__link">
+        Data Cleaning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelSelectC/" class="md-nav__link">
+        Model Selection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuningC/" class="md-nav__link">
+        Hyperparameter Tuning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataexpR/" class="md-nav__link">
+        Data Exploration (Regression)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataEngineering/" class="md-nav__link">
+        Feature Engineering
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelSelectR/" class="md-nav__link">
+        Model Selection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuningR/" class="md-nav__link">
+        Hyperparameter Tuning
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-for-creating-machine-learning-model" class="md-nav__link">
+    Workflow for creating machine learning model 🏗️
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow for creating machine learning model 🏗️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    Step 4️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7" class="md-nav__link">
+    Step 7️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8" class="md-nav__link">
+    Step 8️⃣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-9" class="md-nav__link">
+    Step 9️⃣
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Hg03/classification/edit/master/docs/workflow.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>Workflow of ML model</h1>
+
+<h2 id="workflow-for-creating-machine-learning-model">Workflow for creating machine learning model 🏗️</h2>
+<p><img alt="alt text" src="../img/workflow.jpg" /></p>
+<p>To create any machine learning models, we follow some core steps to reach our goal. As we've previously workflow in <a href="..">introduction section</a>. Here we'll discuss in depth.</p>
+<h3 id="step-1">Step 1️⃣</h3>
+<p><strong>Define the problem</strong> - When any problem comes to you (like identify / predict this, that whatever). </p>
+<p>Just think !!!</p>
+<ul>
+<li>What we really have to find/predict.</li>
+<li>Is your problem classification or regression or is it a unsupervised.</li>
+<li>Is your predictions gonna benefits your company.</li>
+<li>What data or feature you require to creating the model.</li>
+</ul>
+<h3 id="step-2">Step 2️⃣</h3>
+<p><strong>Data Collection</strong> - After defining the problem statement, sometimes should be given to you if you are blessed by GOD otherwise you have to scrap the data from website. After collecting, </p>
+<p>Just think 🤔!!! </p>
+<ul>
+<li>Does that data defines or suits your problem efficiently or more independent variables are required.</li>
+</ul>
+<p>There are many methods or we can say python libraries used to collect the data from website (also known as web scraping) like</p>
+<ul>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a></li>
+<li><a href="https://pypi.org/project/requests/">Requests</a></li>
+<li><a href="https://selenium-python.readthedocs.io/">Selenium</a></li>
+<li><a href="https://docs.python.org/3/library/urllib.html">Urllib</a></li>
+<li>and many more.......</li>
+</ul>
+<h3 id="step-3">Step 3️⃣</h3>
+<p><strong>Data Exploration</strong> 💥 - After collecting data successfully, you have to find out what that data is telling to you like</p>
+<ul>
+<li>How much rows or columns it has.</li>
+<li>What are the counts of values in a columns, is it columns biased (means only one type of value is filled in whole column).</li>
+<li>Are there any missing values and how you deal with it.</li>
+<li>Are there any outliers(some data points which are far different from all points like [1,2,3,10,100], here 100 is outlier).</li>
+<li>Is the distribution of feature is normal(using graph, we check is distribution is gaussian or not) or kinda biased(not following any pattern).</li>
+<li>As our machine learning model doesn't accept categorical/textual data, how you can convert it into numerical form.</li>
+<li>Check relationship between each indepenent feature with independent feature and also independent feature with dependent feature (There should be no relation between independent and independent otherwise non-collinearity occurs and there should be some relation between independent and dependent).</li>
+<li>There is lot of more steps to clean.</li>
+</ul>
+<h3 id="step-4">Step 4️⃣</h3>
+<p><strong>Splitting</strong> 🛣️ - After exploration of dataset, just split your data in part before doing any futher steps. You can split your data in many parts such as -</p>
+<ul>
+<li>Train-Test split - In this ,keep 80%(generally) of data into training of your model and test your model in remaining 20% of your data.</li>
+<li>Cross validation - In this, divide your data in more than 2 parts(usually) like assume 5. So therefore keep the first 4 parts in training and last one in testing, then again train with different 4 parts and anyone part in testing. There are many cross validation techniques such as <strong>leave-one-out</strong>, <strong>k-fold</strong>, <strong>stratified-k-fold</strong>, <strong>Hold-out</strong> and <strong>Repeated-k-fold</strong>.</li>
+</ul>
+<p><strong>Note - After splitting, whatever cleaning, modellin we have to done, do it with training data and keep testing data aside until you want to test your model .</strong></p>
+<h3 id="step-5">Step 5️⃣</h3>
+<p><strong>Data Cleaning</strong> 🧹 - After splitting the dataset(or you can call it data), you have to get your hands dirty in cleaning the data because more cleaner the data you feed to your model, more accurate your model becomes.</p>
+<p><strong>Steps involved in cleaning are :-</strong></p>
+<ul>
+<li>Imputing the missing(null) values by removing them or replacing them with its column's mean,median or mode depends on situation. (There are also multivariate imputing concept, we'll discuss it).</li>
+<li>Encode the categorical features means convert categorical features in numerical features. There are many to encode the categorical like <strong>ordinal encoding</strong>, <strong>one hot encoding</strong>, <strong>target encoding</strong>.</li>
+<li>There may be outliers in the data, so check it using boxplot graph. If there are outliers,we should remove it if we've have lots of data otherwise we shouldn't. There are many methods to remove or replace the outlier's values such as <strong>trimming</strong>, <strong>capping</strong>, <strong>inter-quartile-range</strong> and <strong>discretization</strong>.</li>
+<li>If it is a regression problem or any neural network problem, we also have to make our standardized or normalized (all values should lie between particular range). We can do this using standardization or normalization.[Feature Scaling]</li>
+<li>Standardization or normalization process doesn't required in classification task.</li>
+<li>Making the distribution gaussian by using log ,exponential, square or else-other.</li>
+<li>Remove the feature which are related with independent feature and not related with target. We can identify this using correlation map and can remove feature using some methods such as <strong>pearson correlation coefficient</strong>,<strong>anova test</strong>,<strong>chi square test</strong>,<strong>selectKbest</strong>,<strong>selectpercentil</strong> etc.</li>
+<li>Most Most Most important step is to create a pipeline for data cleaning, so that you don't to do same and same task by your own. Pipeline can do its work automatically.</li>
+</ul>
+<p><strong>Don't hesistate to take time to explore and clean data. Almost 80% of work in creating machine learning model is the feature engineering[all parts that we discussed above] .</strong></p>
+<h3 id="step-6">Step 6️⃣</h3>
+<p><strong>Model Building</strong> 🏚️ - After cleaning the data and creating its pipeline, now we are good to go with model building. Model building consist of following steps such as -</p>
+<ul>
+<li>Different types of algorithm are there in python libraries, which helps us to create ml models.</li>
+</ul>
+<p>List of few of them -</p>
+<table>
+<thead>
+<tr>
+<th>Regression &amp; Classification Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Regression (regression)</td>
+</tr>
+<tr>
+<td>Stochastic Gradient Descent (For both,but mainly regression)</td>
+</tr>
+<tr>
+<td>Logistic Regression (classification)</td>
+</tr>
+<tr>
+<td>Support Vector Machine (For both)</td>
+</tr>
+<tr>
+<td>Decision Tree (For both)</td>
+</tr>
+<tr>
+<td>Random Forest (For both)</td>
+</tr>
+<tr>
+<td>Naive Bayes(For classification)</td>
+</tr>
+<tr>
+<td>ADABoost and Gradient Boost (For classification)</td>
+</tr>
+<tr>
+<td>KNearest Neighbor (For both)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Never ending list.........</strong></p>
+<p>To know more about this models, you can visit <a href="https://scikit-learn.org/stable/supervised_learning.html">sklearn</a>.</p>
+<ul>
+<li>Model creation is as easy as creating instance using function. But we have to make our model accurate so for this <strong>Step 7️⃣</strong> appears.</li>
+<li>Model selection is really crucial, and you also have to try each model based on classification or regression.</li>
+</ul>
+<h3 id="step-7">Step 7️⃣</h3>
+<p><strong>Tuning and tweaking</strong> - To create highly accurate model, we want to choose the correct model from lots of options and that models also contains parameters (functional parameters), so we have to select the right parameters for our model and this process is called <strong>Hyperparameter tuning with model selection</strong>.</p>
+<p><strong>If you are confused here, don't worry we'll see a code example in furhter pages</strong>.</p>
+<h3 id="step-8">Step 8️⃣</h3>
+<p><strong>Evaluation</strong> 📒 - After creating model, we are choosing hyperparameter right ??. So how we can confirm that these are right parameters, by checking accuracy. <strong>Accuracy</strong> is a method in which compare predicted values with real target values. ''More our values are matching with true values, more accurate our model is''.</p>
+<ul>
+<li>To evaluate, we use metrics (its just like methods to find accuracy), for classification and regression we use different metrics such as 
+|Regression|Classification|
+|----------|--------------|
+|Mean Absolute Error|Accuracy|
+|Mean Squared Error|Precision|
+|Root Mean Squared Error|F1 score|
+|Root Mean Logarithmic Error|ROC curve|
+|Mean Percentage Error|AUC|
+|Mean Absolute Percentage Error|Log loss|
+|R square|Average precision|
+||Mean Average Precision|
+||Confusion Matrix|</li>
+</ul>
+<p><strong>To know more about evaluation metrics, check <a href="https://scikit-learn.org/stable/modules/model_evaluation.html">sklearn</a> here</strong>.</p>
+<p><strong>After creating the model for high accuracy, don't forget to put it in pipeline</strong></p>
+<h3 id="step-9">Step 9️⃣</h3>
+<p><strong>Test on real world</strong> - After model building, test your model on testing set(unknown data). Feed your data to pipeline and pipeline do all the feature engineering and model testing by its own.</p>
+<p><strong>Key points to remember</strong> 🖊️</p>
+<ul>
+<li>Machine learning is an iterative process, more we see data, more our model will learn and more accurate it will become.</li>
+</ul>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../types/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Types of ML task" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Types of ML task
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../scraping/" class="md-footer__link md-footer__link--next" aria-label="Next: Data Collection" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data Collection
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 Harish Gehlot
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
